@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "go_x",
+    "slug": "go_x",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
