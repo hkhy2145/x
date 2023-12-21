@@ -1,1 +1,29 @@
-x
+To upload files from a GitHub Codespace to a GitHub repository (https://github.com/hkhy2145/code_space_0_2.git in this case), you can follow these steps:
+
+Clone the Repository: If the repository is not cloned in your Codespace yet, you can clone it using the following command:
+
+bash
+Copy code
+git clone https://github.com/hkhy2145/code_space_0_2.git
+Copy Files to Cloned Repository:
+
+Navigate to the directory where the files are located in your Codespace. Use the cp command to copy the files to the cloned repository:
+
+For example, let's say the files you want to copy are in the /workspaces/x/go_x/files_to_copy directory and you've cloned the repository to /workspaces/x/code_space_0_2:
+
+bash
+Copy code
+cp -r /workspaces/x/go_x/files_to_copy/* /workspaces/x/code_space_0_2/
+This command will copy all files from files_to_copy to the root of the code_space_0_2 repository.
+
+Add, Commit, and Push the Changes:
+
+bash
+Copy code
+cd /workspaces/x/code_space_0_2  # Navigate to the cloned repository
+git add .                        # Add all the copied files
+git commit -m "Add files from Codespace"  # Commit the changes
+git push origin main             # Push changes to the main branch (or relevant branch)
+Make sure to replace main with the appropriate branch name if you're pushing to a different branch.
+
+Remember to double-check the paths and commands according to your specific directory structure and file locations in your Codespace. This sequence of commands clones the repository, copies files into it, stages, commits, and pushes those changes to the GitHub repository specified.
